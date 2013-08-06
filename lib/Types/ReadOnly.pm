@@ -5,7 +5,7 @@ use warnings;
 package Types::ReadOnly;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.000_02';
+our $VERSION   = '0.000_03';
 
 use Type::Tiny 0.022 ();
 use Types::Standard qw( Any Dict );
@@ -93,7 +93,7 @@ declare Locked,
 	pre_check => sub
 	{
 		return unless reftype($_) eq 'HASH';
-		return unless &Types::ReadOnly::_hashref_locked($_);
+		return unless &Internals::SvREADONLY($_);
 		
 		my $type    = shift;
 		my $wrapped = $type->wrapped;
@@ -101,7 +101,7 @@ declare Locked,
 		if (my $KEYS = $wrapped->$_FIND_KEYS) {
 			require Hash::Util;
 			my $keys  = join "*#*", @$KEYS;
-			my $legal = join "*#*", sort { $a cmp $b } &Hash::Util::legal_keys($_);
+			my $legal = join "*#*", sort(&Hash::Util::legal_keys($_));
 			return if $keys ne $legal;
 		}
 		
@@ -111,7 +111,7 @@ declare Locked,
 	{
 		my @r;
 		push @r, qq[Scalar::Util::reftype($_) eq 'HASH'];
-		push @r, qq[Types::ReadOnly::_hashref_locked($_)];
+		push @r, qq[&Internals::SvREADONLY($_)];
 		
 		my $type    = $_[0];
 		my $wrapped = $type->wrapped;
@@ -120,7 +120,7 @@ declare Locked,
 			require B;
 			require Hash::Util;
 			push @r, B::perlstring(join "*#*", @$KEYS)
-				.qq[ eq join "*#*", sort { \$a cmp \$b } &Hash::Util::legal_keys($_)];
+				.qq[ eq join("*#*", sort(&Hash::Util::legal_keys($_)))||''];
 		}
 		
 		return @r;

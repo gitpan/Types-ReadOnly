@@ -38,6 +38,7 @@ dist:project
 	deps:runtime-requirement [ deps:on "Type::Tiny"^^deps:CpanId ];
 	deps:test-requirement [ deps:on "Test::More 0.96"^^deps:CpanId ];
 	deps:test-requirement [ deps:on "Test::Fatal"^^deps:CpanId ];
+	deps:test-requirement [ deps:on "Test::Requires"^^deps:CpanId ];
 	doap:bug-database <http://rt.cpan.org/Dist/Display.html?Queue=Types-ReadOnly>;
 	doap:created      "2013-08-02"^^xsd:date;
 	doap:developer    cpan:tobyink;
@@ -48,6 +49,7 @@ dist:project
 	doap:programming-language "Perl";
 	doap:release      dist:v_0-000_01;
 	doap:release      dist:v_0-000_02;
+	doap:release      dist:v_0-000_03;
 	doap:repository   [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-types-readonly>;
@@ -78,6 +80,33 @@ dist:v_0-000_02
 	dcs:released-by   cpan:tobyink;
 	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Types-ReadOnly-0.000_02.tar.gz>;
 	doap:revision     "0.000_02"^^xsd:string.
+
+dist:v_0-000_03
+	a                 cpant:DeveloperRelease;
+	a                 doap:Version;
+	dc:identifier     "Types-ReadOnly-0.000_03"^^xsd:string;
+	dc:issued         "2013-08-06"^^xsd:date;
+	dcs:changeset     [
+		dcs:item [
+			a dcs:Packaging;
+			rdfs:label "Include test using Types::ReadOnly with Moo.";
+		];
+		dcs:item [
+			a dcs:Packaging;
+			rdfs:label "Include test using Types::ReadOnly with Moose.";
+		];
+		dcs:item [
+			a dcs:Packaging;
+			rdfs:label "Include test using Types::ReadOnly with Mouse.";
+		];
+		dcs:item [
+			a dcs:Packaging;
+			rdfs:label "Include test using Types::ReadOnly with Type::Params.";
+		];
+	];
+	dcs:released-by   cpan:tobyink;
+	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Types-ReadOnly-0.000_03.tar.gz>;
+	doap:revision     "0.000_03"^^xsd:string.
 
 cpan:tobyink
 	a                 foaf:Person;
