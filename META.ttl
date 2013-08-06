@@ -1,0 +1,75 @@
+@prefix cpan:  <http://purl.org/NET/cpan-uri/person/> .
+@prefix cpant: <http://purl.org/NET/cpan-uri/terms#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+@prefix dcs:   <http://ontologi.es/doap-changeset#> .
+@prefix deps:  <http://ontologi.es/doap-deps#> .
+@prefix dist:  <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/> .
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix nfo:   <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+dist:project
+	a                 doap:Project;
+	doap:name         "Types-ReadOnly";
+	cpant:perl_version_from [
+		a nfo:FileDataObject;
+		a nfo:SourceCode;
+		rdfs:label "Types::ReadOnly";
+		nfo:fileName "lib/Types/ReadOnly.pm";
+		nfo:programmingLanguage "Perl";
+	];
+	cpant:readme_from [
+		a nfo:FileDataObject;
+		a nfo:SourceCode;
+		rdfs:label "Types::ReadOnly";
+		nfo:fileName "lib/Types/ReadOnly.pm";
+		nfo:programmingLanguage "Perl";
+	];
+	cpant:version_from [
+		a nfo:FileDataObject;
+		a nfo:SourceCode;
+		rdfs:label "Types::ReadOnly";
+		nfo:fileName "lib/Types/ReadOnly.pm";
+		nfo:programmingLanguage "Perl";
+	];
+	dc:contributor    cpan:tobyink;
+	deps:runtime-requirement [ deps:on "Type::Tiny"^^deps:CpanId ];
+	deps:test-requirement [ deps:on "Test::More 0.96"^^deps:CpanId ];
+	deps:test-requirement [ deps:on "Test::Fatal"^^deps:CpanId ];
+	doap:bug-database <http://rt.cpan.org/Dist/Display.html?Queue=Types-ReadOnly>;
+	doap:created      "2013-08-02"^^xsd:date;
+	doap:developer    cpan:tobyink;
+	doap:download-page <https://metacpan.org/release/Types-ReadOnly>;
+	doap:homepage     <https://metacpan.org/release/Types-ReadOnly>;
+	doap:license      <http://dev.perl.org/licenses/>;
+	doap:maintainer   cpan:tobyink;
+	doap:programming-language "Perl";
+	doap:release      dist:v_0-000_01;
+	doap:repository   [
+		a doap:GitRepository;
+		doap:browse <https://github.com/tobyink/p5-types-readonly>;
+	];
+	doap:shortdesc    "type constraints and coercions for read-only data structures and locked hashes".
+
+dist:v_0-000_01
+	a                 cpant:DeveloperRelease;
+	a                 doap:Version;
+	rdfs:label        "Developer preview";
+	dc:identifier     "Types-ReadOnly-0.000_01"^^xsd:string;
+	dc:issued         "2013-08-06"^^xsd:date;
+	dcs:released-by   cpan:tobyink;
+	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Types-ReadOnly-0.000_01.tar.gz>;
+	doap:revision     "0.000_01"^^xsd:string.
+
+cpan:tobyink
+	a                 foaf:Person;
+	foaf:name         "Toby Inkster";
+	foaf:mbox         <mailto:tobyink@cpan.org>;
+	foaf:nick         "TOBYINK";
+	foaf:page         <https://metacpan.org/author/TOBYINK>.
+
+<http://dev.perl.org/licenses/>
+	dc:title          "the same terms as the perl 5 programming language system itself".
+
