@@ -5,7 +5,7 @@ use warnings;
 package Type::Coercion::Wrapped;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.000_03';
+our $VERSION   = '0.000_04';
 
 use base 'Type::Coercion';
 use Scalar::Util 'weaken';
@@ -59,7 +59,7 @@ sub inline_coercion {
 		$code .= sprintf('do { no warnings; %s };', $post->($tc, $varname));
 	}
 	
-	return $code;
+	"do { no warnings; $code }";
 }
 
 sub can_be_inlined {
