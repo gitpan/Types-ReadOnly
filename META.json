@@ -4,10 +4,10 @@
       "Toby Inkster (TOBYINK) <tobyink@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.013, CPAN::Meta::Converter version 2.120921",
    "keywords" : [],
    "license" : [
-      "perl"
+      "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -23,6 +23,7 @@
          "xt"
       ]
    },
+   "optional_features" : {},
    "prereqs" : {
       "configure" : {
          "requires" : {
@@ -36,28 +37,28 @@
       },
       "test" : {
          "requires" : {
-            "Test::Fatal" : 0,
+            "Test::Fatal" : "0",
             "Test::More" : "0.96",
-            "Test::Requires" : 0
+            "Test::Requires" : "0"
          }
       }
    },
    "provides" : {
       "Type::Coercion::Wrapped" : {
          "file" : "lib/Type/Coercion/Wrapped.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Type::Tiny::Wrapped" : {
          "file" : "lib/Type/Tiny/Wrapped.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Type::Tiny::Wrapper" : {
          "file" : "lib/Type/Tiny/Wrapper.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Types::ReadOnly" : {
          "file" : "lib/Types/ReadOnly.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
    "release_status" : "stable",
@@ -75,6 +76,5 @@
          "web" : "https://github.com/tobyink/p5-types-readonly"
       }
    },
-   "version" : "0.001",
-   "x_provides_scripts" : {}
+   "version" : "0.002"
 }

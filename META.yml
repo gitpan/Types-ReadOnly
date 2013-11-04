@@ -9,9 +9,9 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.17
 dynamic_config: 0
-generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.013, CPAN::Meta::Converter version 2.120921'
 keywords: []
-license: unknown
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -23,19 +23,20 @@ no_index:
     - inc
     - t
     - xt
+optional_features: {}
 provides:
   Type::Coercion::Wrapped:
     file: lib/Type/Coercion/Wrapped.pm
-    version: 0.001
+    version: 0.002
   Type::Tiny::Wrapped:
     file: lib/Type/Tiny/Wrapped.pm
-    version: 0.001
+    version: 0.002
   Type::Tiny::Wrapper:
     file: lib/Type/Tiny/Wrapper.pm
-    version: 0.001
+    version: 0.002
   Types::ReadOnly:
     file: lib/Types/ReadOnly.pm
-    version: 0.001
+    version: 0.002
 requires:
   Type::Tiny: 0.022
 resources:
@@ -44,5 +45,4 @@ resources:
   homepage: https://metacpan.org/release/Types-ReadOnly
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-types-readonly
-version: 0.001
-x_provides_scripts: {}
+version: 0.002

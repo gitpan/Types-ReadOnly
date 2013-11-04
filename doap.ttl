@@ -24,7 +24,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:name            "Types-ReadOnly";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-000_01>, <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-000_02>, <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-000_03>, <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-000_04>, <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-001>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-000_01>, <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-000_02>, <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-000_03>, <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-000_04>, <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-001>, <http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-002>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-types-readonly>;
@@ -99,6 +99,20 @@
 	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Types-ReadOnly-0.001.tar.gz>;
 	doap:revision        "0.001"^^xsd:string.
+
+<http://purl.org/NET/cpan-uri/dist/Types-ReadOnly/v_0-002>
+	a                    doap:Version;
+	dc:identifier        "Types-ReadOnly-0.002"^^xsd:string;
+	dc:issued            "2013-11-04"^^xsd:date;
+	doap-changeset:changeset [
+		doap-changeset:item [
+			a doap-changeset:Change;
+			rdfs:label "Cope with upcoming changes to Dict in Types::Standard.";
+		];
+	];
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Types-ReadOnly-0.002.tar.gz>;
+	doap:revision        "0.002"^^xsd:string.
 
 <http://purl.org/NET/cpan-uri/person/tobyink>
 	a                    foaf:Person;

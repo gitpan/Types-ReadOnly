@@ -33,7 +33,9 @@ DESCRIPTION
 
         When parameterized with a `Dict` type constraint (see
         Types::Standard), it will use the `Dict` type as the authoritative
-        list of keys that the hashref should be locked with.
+        list of keys that the hashref should be locked with, unless the Dict
+        includes a slurpy parameter (e.g. `Dict[foo => Int, slurpy
+        HashRef[Num]]`).
 
         This type constraint inherits coercions from its parameter, and
         applies `lock_ref_keys` to the result.
